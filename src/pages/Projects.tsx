@@ -7,14 +7,14 @@ const projects = [
   {
     title: 'Healpass',
     description: '健康管理アプリ',
-    image: '/images/Healpass.png',
+    image: 'images/Healpass.png',
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     demo: 'https://protopedia.net/prototype/6090'
   },
   {
     title: 'Mon Dev Co',
     description: 'ASMツール',
-    image: '/images/Mon_Dev_Co.jpg',
+    image: 'images/Mon_Dev_Co.jpg',
     tags: ['React', 'Firebase', 'Material-UI'],
     demo: 'https://protopedia.net/prototype/6731'
   },

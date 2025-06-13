@@ -61,7 +61,7 @@ const Home: React.FC = () => {
             <h1 className={`text-4xl md:text-6xl font-playfair font-semibold mb-4 text-primary-700 transition-all duration-1000 delay-300 ${loaded ? 'opacity-100 transform-none' : 'opacity-0 translate-y-8'
               }`}>
               <span className="relative">
-                Yuki Tanaka
+                Miyu Seki
                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary-300 opacity-50"></span>
               </span>
             </h1>

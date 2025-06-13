@@ -19,7 +19,7 @@ const About: FC = (): ReactNode => {
                 <div className="absolute -top-4 -left-4 w-32 h-32 border-2 border-primary-300 rounded-lg opacity-30"></div>
                 <div className="relative z-10 rounded-lg overflow-hidden shadow-medium ribbon">
                   <img
-                    src="https://images.pexels.com/photos/5876695/pexels-photo-5876695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    src="images/my_photo.jpg"
                     alt="Profile"
                     className="w-full h-auto object-cover"
                   />

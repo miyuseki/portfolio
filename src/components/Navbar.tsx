@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             duration={500}
             className="flex items-center cursor-pointer"
           >
-            <HeartHandshake className="w-8 h-8 text-primary-400" />
+            <img src="images/umyu.png" alt="logo" className="w-8 h-8" />
             <span className="ml-2 text-xl font-playfair font-semibold text-primary-700">
               Portfolio
             </span>

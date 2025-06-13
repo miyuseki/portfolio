@@ -6,8 +6,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const characters = [
   {
     image: 'https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    nameJp: '田中 優希',
-    nameEn: 'Yuki Tanaka',
+    nameJp: '関 美優',
+    nameEn: 'Miyu Seki',
     application: 'Portfolio Website',
     description: '創造的で細部にこだわりを持つフロントエンド開発者。美しいUIとスムーズなUXの実現に情熱を注ぐ。',
     skills: ['React', 'TypeScript', 'Tailwind CSS', 'UI/UX Design'],
