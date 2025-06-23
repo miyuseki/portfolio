@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             </h3>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/miyuseki" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary-500 transition-colors"
@@ -21,32 +21,32 @@ const Footer: React.FC = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://protopedia.net/prototyper/trz_hi82" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary-500 transition-colors"
-                aria-label="LinkedIn"
+                aria-label="protopedia"
               >
-                <Linkedin className="w-5 h-5" />
+                 <span className="sr-only">Protopedia</span>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="10" fill="#ff8daa" />
+                        <text x="6" y="15" fontSize="12" fontWeight="bold" fill="white">P</text>
+                      </svg>
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://aiel.jp/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary-500 transition-colors"
-                aria-label="Instagram"
+                aria-label="lab"
               >
-                <Instagram className="w-5 h-5" />
+                <span className="sr-only">AIEL Lab</span>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="10" fill="#d8b4f8" />
+                        <text x="6" y="15" fontSize="12" fontWeight="bold" fill="white">L</text>
+                      </svg>
               </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-500 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
+             
             </div>
           </div>
           

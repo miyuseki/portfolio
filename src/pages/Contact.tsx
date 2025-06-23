@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedSection from '../components/AnimatedSection';
 import Button from '../components/ui/Button';
-import { Mail, MapPin, Send, Github, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Github } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -25,24 +25,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+    window.open('https://forms.gle/XvHZmmRnki5bK3m77', '_blank');
   };
 
   return (
@@ -54,7 +37,7 @@ const Contact: React.FC = () => {
         />
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
             <AnimatedSection animation="slide-in-left">
               <div className="bg-white p-8 rounded-lg shadow-soft border border-primary-100">
                 <h3 className="text-2xl font-playfair font-semibold text-primary-700 mb-6">
@@ -89,7 +72,7 @@ const Contact: React.FC = () => {
                   </h4>
                   <div className="flex space-x-4">
                     <a
-                      href="https://github.com"
+                      href="https://github.com/miyuseki"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white p-3 rounded-full shadow-soft border border-primary-100 text-gray-600 hover:text-primary-500 transition-colors"
@@ -98,31 +81,30 @@ const Contact: React.FC = () => {
                       <Github className="w-5 h-5" />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://protopedia.net/prototyper/trz_hi82"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white p-3 rounded-full shadow-soft border border-primary-100 text-gray-600 hover:text-primary-500 transition-colors"
-                      aria-label="LinkedIn"
+                      className="bg-white p-3 rounded-full shadow-soft border border-primary-100 text-gray-600 hover:text-primary-500 transition-colors flex items-center justify-center"
+                      aria-label="Protopedia"
                     >
-                      <Linkedin className="w-5 h-5" />
+                      <span className="sr-only">Protopedia</span>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="10" fill="#ff8daa" />
+                        <text x="6" y="15" fontSize="12" fontWeight="bold" fill="white">P</text>
+                      </svg>
                     </a>
                     <a
-                      href="https://instagram.com"
+                      href="https://aiel.jp/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white p-3 rounded-full shadow-soft border border-primary-100 text-gray-600 hover:text-primary-500 transition-colors"
-                      aria-label="Instagram"
+                      className="bg-white p-3 rounded-full shadow-soft border border-primary-100 text-gray-600 hover:text-primary-500 transition-colors flex items-center justify-center"
+                      aria-label="AIEL Lab"
                     >
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white p-3 rounded-full shadow-soft border border-primary-100 text-gray-600 hover:text-primary-500 transition-colors"
-                      aria-label="Twitter"
-                    >
-                      <Twitter className="w-5 h-5" />
+                      <span className="sr-only">AIEL Lab</span>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="10" fill="#d8b4f8" />
+                        <text x="6" y="15" fontSize="12" fontWeight="bold" fill="white">L</text>
+                      </svg>
                     </a>
                   </div>
                 </div>
@@ -130,97 +112,26 @@ const Contact: React.FC = () => {
             </AnimatedSection>
 
             <AnimatedSection animation="slide-in-right">
-              <div className="bg-white p-8 rounded-lg shadow-soft border border-primary-100">
-                <h3 className="text-2xl font-playfair font-semibold text-primary-700 mb-6">
-                  Send Me a Message
-                </h3>
+              <div className="bg-white p-8 rounded-lg shadow-soft border border-primary-100 h-full flex flex-col justify-center">
+                <div className="flex flex-col items-center mb-8">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" className="mb-4">
+                    <rect x="8" y="16" width="48" height="32" rx="8" fill="#FFB6C1" />
+                    <rect x="16" y="24" width="32" height="16" rx="4" fill="white" />
+                    <circle cx="32" cy="32" r="4" fill="#FFB6C1" />
+                  </svg>
+                  <p className="text-gray-600 text-center text-sm max-w-xs">
+                    お問い合わせはGoogleフォームから受け付けています。ご質問やご相談など、お気軽にご連絡ください。
+                  </p>
+                </div>
 
                 <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-300 focus:outline-none transition-colors"
-                      placeholder="Your Name"
-                    />
-                  </div>
-
-                  <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Your Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-300 focus:outline-none transition-colors"
-                      placeholder="Your Email"
-                    />
-                  </div>
-
-                  <div className="mb-4">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-300 focus:outline-none transition-colors"
-                      placeholder="Project Inquiry"
-                    />
-                  </div>
-
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-300 focus:outline-none transition-colors"
-                      placeholder="Your message here..."
-                    ></textarea>
-                  </div>
-
-                  {submitSuccess && (
-                    <div className="mb-4 p-3 bg-green-50 text-green-700 rounded-md">
-                      Your message has been sent successfully! I'll get back to you soon.
-                    </div>
-                  )}
-
                   <Button
                     type="submit"
                     variant="primary"
                     size="lg"
                     className="w-full"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      'Sending...'
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        Send Message
-                      </>
-                    )}
+                    Googleフォームでお問い合わせ
                   </Button>
                 </form>
               </div>
