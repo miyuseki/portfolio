@@ -7,6 +7,9 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Achievements from './pages/Achievements';
 import Contact from './pages/Contact';
+import CharacterCarousel from './pages/CharacterCarousel';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         </section>
         <section id="about" className="max-w-4xl mx-auto px-4">
           <About />
+        </section>
+        <section id="character" className="max-w-4xl mx-auto px-4">
+          <CharacterCarousel />
         </section>
         <section id="skills" className="max-w-4xl mx-auto px-4">
           <Skills />

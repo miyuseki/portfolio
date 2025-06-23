@@ -3,6 +3,7 @@ import SectionTitle from '../components/SectionTitle';
 import AnimatedSection from '../components/AnimatedSection';
 import CircularProgress from '../components/CircularProgress';
 import { Code, Palette, Database, Globe, Layers, Wrench } from 'lucide-react';
+import CharacterCarousel from './CharacterCarousel';
 
 interface SkillCategory {
   id: string;

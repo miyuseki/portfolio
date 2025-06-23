@@ -42,7 +42,7 @@ const About: FC = (): ReactNode => {
                       </div>
                       <div className="ml-4">
                         <h5 className="text-base font-medium text-gray-800">麻生情報ビジネス専門学校</h5>
-                        <p className="text-sm text-gray-600">情報工学科 (2024-2027 予定)</p>
+                        <p className="text-sm text-gray-600">情報工学科 (2023-2027 予定)</p>
                       </div>
                     </div>
                   </div>

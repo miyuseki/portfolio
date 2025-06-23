@@ -20,25 +20,25 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="notebook-card mx-2 bg-[#FFFFF0] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2"
+      className="notebook-card mx-2 bg-[#FFFFF0] rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2 w-[700px]"
       whileHover={{ scale: 1.02 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
       {/* Notebook rings */}
-      <div className="flex justify-center space-x-4 py-2 border-b border-[#E5E5E5]">
+      <div className="flex justify-center space-x-2 py-1 border-b border-[#E5E5E5]">
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
-            className="w-4 h-4 rounded-full bg-primary-200 border-2 border-primary-300"
+            className="w-2 h-2 rounded-full bg-primary-200 border border-primary-300"
           />
         ))}
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <div className="w-[250px] h-[250px] mx-auto mb-4 rounded-lg overflow-hidden">
+      <div className="p-3">
+        <div className="w-[120px] h-[120px] mx-auto mb-2 rounded-lg overflow-hidden">
           <img
             src={image}
             alt={nameJp}
@@ -46,29 +46,29 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-2">
           <div className="text-center">
-            <h3 className="text-2xl font-playfair text-primary-700">{nameJp}</h3>
-            <p className="text-sm text-gray-500">{nameEn}</p>
+            <h3 className="text-lg font-playfair text-primary-700">{nameJp}</h3>
+            <p className="text-xs text-gray-500">{nameEn}</p>
           </div>
 
-          <div className="border-t border-b border-[#E5E5E5] py-3">
-            <h4 className="text-sm font-medium text-primary-600 mb-1">Application</h4>
-            <p className="text-gray-700">{application}</p>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-medium text-primary-600 mb-1">Description</h4>
-            <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
+          <div className="border-t border-b border-[#E5E5E5] py-1">
+            <h4 className="text-xs font-medium text-primary-600 mb-1">Application</h4>
+            <p className="text-gray-700 text-xs">{application}</p>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium text-primary-600 mb-2">Skills</h4>
-            <div className="flex flex-wrap gap-2">
+            <h4 className="text-xs font-medium text-primary-600 mb-1">Description</h4>
+            <p className="text-gray-700 text-xs leading-relaxed">{description}</p>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-medium text-primary-600 mb-1">Skills</h4>
+            <div className="flex flex-wrap gap-1">
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-xs rounded-full bg-primary-50 text-primary-600"
+                  className="px-2 py-0.5 text-[10px] rounded-full bg-primary-50 text-primary-600"
                 >
                   {skill}
                 </span>

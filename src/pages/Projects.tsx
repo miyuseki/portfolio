@@ -19,12 +19,12 @@ const projects = [
     demo: 'https://protopedia.net/prototype/6731'
   },
   {
-    title: 'AI Image Generator',
-    description: 'An AI-powered image generation tool that creates unique artwork based on text prompts. Uses OpenAI\'s DALL-E API and React for the frontend.',
-    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    title: 'Passit',
+    description: '予約譲渡アプリ',
+    image: 'images/passit.png',
     tags: ['React', 'OpenAI API', 'Tailwind CSS'],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
+    demo: 'https://protopedia.net/prototype/6737',
+    ui: 'https://drive.google.com/file/d/12f6xJhOtweeM-Dv9GBJukoFkyHylzvYn/view?usp=drive_link'
   }
 ];
 
@@ -95,15 +95,6 @@ const Projects = () => {
                       <p className="text-gray-600 mb-4">{project.description}</p>
                       <div className="flex gap-4">
                         <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-gray-600 hover:text-primary-500 transition-colors"
-                        >
-                          <Github className="w-5 h-5" />
-                          <span>View Code</span>
-                        </a>
-                        <a
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -112,6 +103,17 @@ const Projects = () => {
                           <ExternalLink className="w-5 h-5" />
                           <span>Live Demo</span>
                         </a>
+                        {project.ui && (
+                          <a
+                            href={project.ui}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-gray-600 hover:text-primary-500 transition-colors"
+                          >
+                            <ExternalLink className="w-5 h-5" />
+                            <span>UIを見る</span>
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
