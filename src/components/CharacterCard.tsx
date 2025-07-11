@@ -8,6 +8,8 @@ interface CharacterCardProps {
   application: string;
   description: string;
   skills: string[];
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
@@ -17,6 +19,8 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   application,
   description,
   skills,
+  imageWidth = 300,
+  imageHeight = 200,
 }) => {
   return (
     <motion.div
@@ -38,7 +42,10 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 
       {/* Content */}
       <div className="p-3">
-        <div className="w-[120px] h-[120px] mx-auto mb-2 rounded-lg overflow-hidden">
+        <div
+          className="mx-auto mb-2 rounded-lg overflow-hidden"
+          style={{ width: `${imageWidth}px`, height: `${imageHeight}px` }}
+        >
           <img
             src={image}
             alt={nameJp}

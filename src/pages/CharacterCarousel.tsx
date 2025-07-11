@@ -2,15 +2,18 @@ import React from 'react';
 import Slider from 'react-slick';
 import CharacterCard from '../components/CharacterCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { image } from 'framer-motion/client';
 
 const characters = [
   {
-    image: 'images/umyu.png',
+    image: 'images/umyutyan.png',
     nameJp: 'うみゅー',
     nameEn: 'umyu',
     application: 'Portfolio favicon',
     description: 'あなたのタブにちょこんとウミウシ',
     skills: ['癒し波動'],
+    imageWidth: 300,
+    imageHeight: 220,
   },
   {
     image: 'images/passan.png',
@@ -19,6 +22,8 @@ const characters = [
     application: 'Passit app',
     description: 'イケメンより愛着-顔面偏差値より情緒偏差値。',
     skills: ['継続愛着'],
+    imageWidth: 200,
+    imageHeight: 200,
   },
   {
     image: 'images/AIEL.png',
@@ -27,6 +32,8 @@ const characters = [
     application: 'Lab favicon',
     description: '情報をついばむ、テクノカラス',
     skills: ['鋭眼'],
+    imageWidth: 200,
+    imageHeight: 200,
   },
 ];
 
