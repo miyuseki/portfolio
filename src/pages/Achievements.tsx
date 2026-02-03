@@ -13,18 +13,21 @@ const Achievements: React.FC = () => {
           subtitle="A timeline of my professional accomplishments and milestones"
         />
 
-        <AnimatedSection className="max-w-4xl mx-auto mt-16">
+        <AnimatedSection className="max-w-4xl mx-auto mt-90">
           <div className="relative timeline overflow-x-auto pb-8 pt-8" style={{ minHeight: '500px' }}>
             {/* 横軸 */}
-            <div className="absolute top-1/2 left-0 w-[2000px] h-1 bg-primary-200 z-0" style={{ transform: 'translateY(-50%)' }}></div>
+            <div className="absolute top-1/2 left-0 w-[3100px] h-1 bg-primary-200 z-0" style={{ transform: 'translateY(-50%)' }}></div>
             <div className="inline-flex min-w-max relative z-10">
               {[
-                { date: "06 2024-12 2024", title: "九州アプリチャレンジ・キャラバン 2024コンテスト", description: "健闘賞", position: "top", icon: <BookOpen className="w-3 h-3 text-white" /> },
-                { date: "08 2024-12 2024", title: "Engineer Drive Day 2024", description: "ライブリンクス賞", position: "bottom", icon: <Zap className="w-3 h-3 text-white" /> },
-                { date: "10 2024", title: "FUKUOKA学生ビジコン2024", description: "ブロックチェーン特別賞", position: "top", icon: <Award className="w-3 h-3 text-white" /> },
-                { date: "10 2024-12 2024", title: "MBSD Cybersesecurity 2024", description: "最優秀賞", position: "bottom", icon: <Mic className="w-3 h-3 text-white" /> },
-                { date: "11 2024", title: "ブロックチェーンフォーラム 登壇", description: "", position: "top", icon: <Mic className="w-3 h-3 text-white" /> },
-                { date: "12 2024", title: "技育博", description: "サイバーエージェント賞", position: "bottom", icon: <Mic className="w-3 h-3 text-white" /> },
+                { date: "2024-12", title: "九州アプリチャレンジ・キャラバン 2024コンテスト", description: "健闘賞", position: "top", icon: <BookOpen className="w-3 h-3 text-white" /> },
+                { date: "2024-12", title: "Engineer Drive Day 2024", description: "ライブリンクス賞", position: "bottom", icon: <Zap className="w-3 h-3 text-white" /> },
+                { date: "2024-10", title: "FUKUOKA学生ビジコン2024", description: "ブロックチェーン特別賞", position: "top", icon: <Award className="w-3 h-3 text-white" /> },
+                { date: "2024-12", title: "MBSD Cybersesecurity 2024", description: "最優秀賞", position: "bottom", icon: <Mic className="w-3 h-3 text-white" /> },
+                { date: "2024-11", title: "ブロックチェーンフォーラム 登壇", description: "", position: "top", icon: <BookOpen className="w-3 h-3 text-white" /> },
+                { date: "2024-12", title: "技育博", description: "サイバーエージェント賞", position: "bottom", icon: <Zap className="w-3 h-3 text-white" /> },
+                { date: "2025-10", title: "JPHSCKS2025", description: "オーディエンス賞", position: "top", icon: <Award className="w-3 h-3 text-white" /> },
+                { date: "2025-11", title: "技育展", description: "企業賞（株式会社CARTA HOLDINGS）", position: "bottom", icon: <BookOpen className="w-3 h-3 text-white" /> },
+                { date: "2025-12", title: "Engineer Drive Day 2025", description: "プロダクト開発部門賞、パソナ賞、アジアクエスト賞", position: "top", icon: <Zap className="w-3 h-3 text-white" /> },
 
               ].map((item, idx) => (
                 <div key={idx} className="relative flex flex-col items-center mx-8" style={{ minWidth: '280px' }}>
@@ -75,6 +78,18 @@ const Achievements: React.FC = () => {
                 <li className="flex items-start">
                   <span className="inline-block w-2 h-2 rounded-full bg-primary-400 mt-2 mr-2"></span>
                   <span className="text-gray-700">技育博 : サイバーエージェント賞</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary-400 mt-2 mr-2"></span>
+                  <span className="text-gray-700">JPHACKS2025 : オーディエンス賞</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary-400 mt-2 mr-2"></span>
+                  <span className="text-gray-700">技育展 : 企業賞（株式会社CARTA HOLDINGS）</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-2 h-2 rounded-full bg-primary-400 mt-2 mr-2"></span>
+                  <span className="text-gray-700">Engineer Drive Day 2025 : プロダクト開発部門賞、パソナ賞、アジアクエスト賞</span>
                 </li>
               </ul>
             </div>

@@ -25,7 +25,14 @@ const projects = [
     tags: ['React', 'OpenAI API', 'Tailwind CSS'],
     demo: 'https://protopedia.net/prototype/6737',
     ui: 'https://drive.google.com/file/d/12f6xJhOtweeM-Dv9GBJukoFkyHylzvYn/view?usp=drive_link'
-  }
+  },
+  {
+    title: 'nois',
+    description: '無音通話アプリ',
+    image: 'images/nois.jpg',
+    tags: ['React', 'Python', 'Firebase'],
+    demo: 'https://protopedia.net/prototype/7533',
+  },
 ];
 
 const Projects = () => {
